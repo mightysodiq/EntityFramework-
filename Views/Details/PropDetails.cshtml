@@ -1,0 +1,292 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var hotel = ViewData["hotel"] as HotelModel;
+    var randomHotels = ViewData["randomHotels"] as List<HotelModel>;
+}
+
+
+
+   
+
+    <!-- ======= Houses with beauty Backyards ======= -->
+   <section id="steps" class="steps section-bg"style="margin-top:6vh">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><a asp-controller="Home" asp-action="Index">Home</a> / <b>House Details</b></p>
+                <h2 style="margin-left:34vw"><b>@hotel.Name</b></h2>
+                <small style="margin-left:37vw">@hotel.Location, Indonesia.</small>
+            </div>
+        </div>
+
+        
+        <div style="display:flex;flex-direction:row;justify-content:space-between;text-align:center;margin-top:6vh">
+
+
+            <div class="col-12 col-lg-7 col-md-7" data-aos="fade-left" data-aos-delay="100">
+                    
+                   <img src="@hotel.ImgURL" class="img-fluid" alt="" style="height:50vh;width:250vw" data-aos="fade-in">
+                         
+            </div>
+
+            <div class="col-lg-5 col-md-5 " data-aos="fade-right" data-aos-delay="100">
+
+
+                 <div class="col-12">
+                    <img src="@hotel.HotelImageUrl2" class="img-fluid" alt="" width="inherit" height="inherit" style=" border-radius:20px;height:25vh;width:50vw;margin-left:1vw" data-aos="fade-in">
+
+                 </div>
+
+                <div class="col-12">
+                    <img src="@hotel.HotelImageUrl3" class="img-fluid" alt="" width="inherit" height="inherit" style=" border-radius:20px;height:25vh;width:50vw;margin-left:1vw;margin-top:1vh" data-aos="fade-in">
+
+                </div>
+                    
+
+
+             </div>    
+              
+
+         </div>
+
+
+       </div>
+
+    </div>
+</section><!-- End Houses with beauty Backyards -->
+
+
+
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about" style="margin-top:1vh">
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-8  pt-5 pt-lg-0" style=" padding-right:4vw">
+                <h5 data-aos="fade-up" style="color:darkblue;font-weight:400">About The Place</h5>
+                <p data-aos="fade-up">
+                    <small>
+                    
+                            @hotel.HotelAboutDPlace
+
+                    </small>
+                </p>
+                
+                
+                 
+                <div class="icon-box">
+                    
+
+                    <div style="display:flex;justify-content:space-between;">
+
+                        <div>
+                            <span>
+                                <img src="~/img/new/firsta.png" class="img-fluid" alt="travel" style="margin-right:4vw"><br />
+                                <small><b>@hotel.BedRoom</b> Bedroom</small>
+                            </span>
+
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/seconda.png" class="img-fluid" alt="treasures"><br />
+                                <small><b>@hotel.LivingRoom</b> living room</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/thirda.png" class="img-fluid" alt="location"><br />
+                                <small><b>@hotel.BathRoom</b> bathroom</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/dining.png" class="img-fluid" alt="location"><br />
+                                <small><b>@hotel.DiningRoom</b> dining room</small>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+                    <div style="display:flex;justify-content:space-between;margin-top:1vw">
+
+                        <div>
+                            <span>
+                                <img src="~/img/new/wifi.png" class="img-fluid" alt="travel" style="margin-right:4vw"><br />
+                                <small><b>@hotel.Mbps</b> mbp/s</small>
+                            </span>
+
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/ac.png" class="img-fluid" alt="treasures"><br />
+                                <small><b>@hotel.UnitsReady</b> units ready</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/frige.png" class="img-fluid" alt="location"><br />
+                                <small><b>@hotel.Refrigerator</b> Refrigerators</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span style="margin-right:4vw">
+                                <img src="~/img/new/tv.png" class="img-fluid" alt="location"><br />
+                                <small><b>@hotel.Television</b> Televisions</small>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-xl-4 col-lg-4" data-aos="fade-right" style="padding-left:4vw;border:1px solid darkgray;max-height:80vh;padding-top:13vh">
+                <h6><b>Start booking</b></h6>
+                <h3><span style="color:aqua">$@hotel.Price</span> <span style="color:lightgray">per night</span></h3>
+                <h6>How long do you want to stay ?</h6>
+
+                <div class="input-wrapper">
+                    <span class="minus">-</span>
+                    <input type="text" id="num-nights" value="1 night" readonly >
+                    <span class="plus">+</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End About Section -->
+
+
+
+
+
+
+<!-- ======= Hotels with large living rooms ======= -->
+<section id="steps" class="steps section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>You may also Like</h4>
+            </div>
+        </div>
+
+
+        <div style="display:flex;flex-direction:row;justify-content:space-between;text-align:center">
+
+            <div class=" row no-gutters">
+                @if (randomHotels != null)
+                {
+                    foreach (var property in randomHotels)
+                    {
+                        if (property.Popularity == "Popular Choice")
+                        {
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-left" data-aos-delay="100">
+
+                                <div style="position:relative;">
+                                    <a asp-controller="Details" asp-action="PropDetails" asp-route-id="@property.Id">
+                                        <img src="@property.ImgURL" class="img-fluid" alt="" style="border-radius:20px;height:30vh;width:250vw;" data-aos="fade-in">
+                                    </a>
+                                    <span style="position:absolute; top:10px; right:10px; background-color:deeppink; padding:5px 10px; border-radius:10px; color:white; font-weight:bold;">@property.Popularity</span>
+                                </div>
+
+                                <h6>@property.Name</h6>
+                                <p>@property.Location, Indonesia</p>
+                            </div>
+
+
+                        }
+                        else
+                        {
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <a asp-controller="Details" asp-action="PropDetails" asp-route-id="@property.Id">
+                                    <img src="@property.ImgURL" class="img-fluid" alt="" width="inherit" height="inherit" style=" border-radius:20px;height:30vh;width:250vw;" data-aos="fade-in">
+                                </a>
+                                <h6>@property.Name</h6>
+                                <p>@property.Location, Indonesia</p>
+                            </div>
+
+                        }
+                    }
+                }
+
+
+            </div>
+
+
+        </div>
+    </div>
+</section><!-- Hotels with large living rooms -->
+
+
+
+ 
+
+
+
+
+<section id="about" class="about" style="margin-top:20vh">
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+                <img src="~/img/happyfamile.png" class="img-fluid" alt="" width="400vw" height="400vh" style=" border-radius: 100px 15px 15px 15px;">
+            </div>
+
+
+            <div class="col-xl-6 col-lg-2 pt-5 pt-lg-0"  >
+
+                <h5 data-aos="fade-up" style="color:darkblue;">Happy Family</h5>
+                <img src="~/img/new/stars.png" class="img-fluid" alt="" width="inherit" height="inherit" data-aos="fade-in">
+
+                <h3 data-aos="fade-up" style="color:darkblue;font-weight:400">As a wife, I can pick a great trip with my family...Thank you.</h3>
+                <p>Anggar, Product Manager</p>
+                <p>
+                    <button class="btn btn-primary" style="margin-bottom:7vh;color:white;">Read their story</button>
+                </p>
+                 
+
+
+            </div>
+
+           
+
+        </div>
+
+    </div>
+</section><!-- End About Section -->
+
+
+
+
+
+
+
+    
+
+     
+
